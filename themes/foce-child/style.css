@@ -9,6 +9,7 @@
  Version: 0.1
  */
 .banner {
+  position: relative;
   opacity: 0;
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
@@ -24,7 +25,49 @@
     opacity: 1;
   }
 }
+.banner__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.banner__logo {
+  position: relative;
+  z-index: 20;
+  transition: top ease-in-out 0.2s;
+  animation: 19s linear infinite floating;
+}
+@keyframes floating {
+  0% {
+    transform: translate(0, 0);
+  }
+  15% {
+    transform: translate(2em, -1em);
+  }
+  35% {
+    transform: translate(-2em, 1em);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  65% {
+    transform: translate(-2em, -1em);
+  }
+  85% {
+    transform: translate(2em, 1em);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
 
+@media screen and (max-width: 425px) {
+  .banner__video {
+    display: none;
+  }
+}
 .story {
   opacity: 0;
   animation-duration: 2s;
@@ -44,7 +87,7 @@
 .story h2::after {
   width: 155px;
   height: 155px;
-  animation: 18s linear infinite rotation;
+  animation: 20s linear infinite rotation;
 }
 @keyframes rotation {
   0% {
@@ -55,7 +98,7 @@
   }
 }
 .story__article::after {
-  animation: 18s linear infinite rotation;
+  animation: 20s linear infinite rotation;
 }
 @keyframes rotation {
   0% {
@@ -85,7 +128,7 @@
 #studio h2::before {
   width: 203px;
   height: 203px;
-  animation: 18s linear infinite rotation;
+  animation: 20s linear infinite rotation;
 }
 @keyframes rotation {
   0% {
@@ -98,7 +141,7 @@
 #studio h2::after {
   width: 109px;
   height: 109px;
-  animation: 18s linear infinite rotation;
+  animation: 20s linear infinite rotation;
 }
 @keyframes rotation {
   0% {
@@ -109,7 +152,9 @@
   }
 }
 
-.site-footer {
+.oscar {
+  position: relative;
+  padding: 12em 0 6em;
   opacity: 0;
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
@@ -125,23 +170,14 @@
     opacity: 1;
   }
 }
-.site-footer::before {
-  width: 155px;
-  height: 155px;
-  animation: 18s linear infinite rotation;
-}
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-.site-footer::after {
+.oscar::after {
+  content: url("../foce/assets/images/orchid.png");
+  position: absolute;
+  right: -4em;
+  top: -4em;
   width: 173px;
   height: 173px;
-  animation: 18s linear infinite rotation;
+  animation: 20s linear infinite rotation;
 }
 @keyframes rotation {
   0% {
@@ -151,8 +187,80 @@
     transform: rotate(360deg);
   }
 }
+.oscar > div {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1041px;
+  margin: auto;
+}
+.oscar > div::before {
+  content: url("./assets/images/Sunflower.png");
+  position: absolute;
+  left: -8em;
+  top: -11em;
+  width: 216px;
+  height: 216px;
+  animation: 20s linear infinite rotation;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.oscar__annonce {
+  width: 73.2%;
+  height: 283px;
+  background-image: url("./assets/images/fond_oscars.png");
+  background-size: 100% 100%;
+}
+.oscar__annonce > p {
+  display: inline-block;
+  max-width: 586px;
+  font-weight: bold;
+  margin: 56.48px auto auto 67.91px;
+  padding: 0;
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  font-size: 2.625rem;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.oscar__logo {
+  margin-top: 3.53em;
+  width: 26.8%;
+  height: 283px;
+  background-image: url("./assets/images/oscars.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.site-footer {
+  opacity: 0;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 8s;
+  animation-fill-mode: forwards;
+  animation-name: fadeIn;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.site-footer::before {
+  content: "";
+}
+.site-footer::after {
+  content: "";
+}
 .site-footer ul::after {
-  animation: 18s linear infinite rotation;
+  animation: 20s linear infinite rotation;
 }
 @keyframes rotation {
   0% {

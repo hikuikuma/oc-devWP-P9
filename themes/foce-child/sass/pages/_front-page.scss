@@ -1,6 +1,31 @@
 .banner {
+    position: relative;
     opacity: 0;
     @include section-fade-in(0);
+
+    &__video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+    }
+
+    &__logo {
+        position: relative;
+        z-index: 20;
+        transition: top ease-in-out 0.2s;
+        @include title-floating;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .banner {
+        &__video {
+            display: none;
+        }
+    }
 }
 
 .story {
@@ -41,20 +66,82 @@
     }
 }
 
-.site-footer {
+.oscar {
+    position: relative;
+    padding: 12em 0 6em;
     opacity: 0;
     @include section-fade-in(6s);
 
-    &::before {
-        width: 155px;
-        height: 155px;
-        @include flower-rotation;
-    }
+
 
     &::after {
+        content: url("../foce/assets/images/orchid.png");
+        position: absolute;
+        right: -4em;
+        top: -4em;
         width: 173px;
         height: 173px;
         @include flower-rotation;
+    }
+
+    &>div {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        max-width: 1041px;
+        margin: auto;
+
+        &::before {
+            content: url("./assets/images/Sunflower.png");
+            position: absolute;
+            left: -8em;
+            top: -11em;
+            width: 216px;
+            height: 216px;
+            @include flower-rotation;
+        }
+    }
+
+    &__annonce {
+        width: 73.2%;
+        height: 283px;
+        background-image: url('./assets/images/fond_oscars.png');
+        background-size: 100% 100%;
+
+        &>p {
+            display: inline-block;
+            max-width: 586px;
+            font-weight: bold;
+            margin: 56.48px auto auto 67.91px;
+            padding: 0;
+            color: white;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 2.625rem;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    &__logo {
+        margin-top: 3.53em;
+        width: 26.8%;
+        height: 283px;
+        background-image: url('./assets/images/oscars.png');
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+    }
+
+}
+
+.site-footer {
+    opacity: 0;
+    @include section-fade-in(8s);
+
+    &::before {
+        content: "";
+    }
+
+    &::after {
+        content: "";
     }
 
     ul {

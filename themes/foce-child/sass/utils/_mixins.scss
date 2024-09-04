@@ -17,7 +17,7 @@
 }
 
 @mixin flower-rotation() {
-    animation: 18s linear infinite rotation;
+    animation: 20s linear infinite rotation;
 
     @keyframes rotation {
         0% {
@@ -26,6 +26,40 @@
 
         100% {
             transform: rotate(360deg);
+        }
+    }
+}
+
+@mixin title-floating() {
+    animation: 19s linear infinite floating;
+
+    @keyframes floating {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        15% {
+            transform: translate(2em, -1em);
+        }
+
+        35% {
+            transform: translate(-2em, 1em);
+        }
+
+        50% {
+            transform: translate(0, 0);
+        }
+
+        65% {
+            transform: translate(-2em, -1em);
+        }
+
+        85% {
+            transform: translate(2em, 1em);
+        }
+
+        100% {
+            transform: translate(0, 0);
         }
     }
 }
