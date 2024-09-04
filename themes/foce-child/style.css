@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
  Theme Name:  Fleurs d'orangers et chats errants - Oscars Short
  Theme URI: https://www.koukaki.local
@@ -7,3 +8,159 @@
  Description: Thème enfant à l'ocasion de la nomination aux Oscars Shorts
  Version: 0.1
  */
+.banner {
+  opacity: 0;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-fill-mode: forwards;
+  animation-name: fadeIn;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.story {
+  opacity: 0;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  animation-name: fadeIn;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.story h2::after {
+  width: 155px;
+  height: 155px;
+  animation: 18s linear infinite rotation;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.story__article::after {
+  animation: 18s linear infinite rotation;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#studio {
+  opacity: 0;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+  animation-name: fadeIn;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#studio h2::before {
+  width: 203px;
+  height: 203px;
+  animation: 18s linear infinite rotation;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#studio h2::after {
+  width: 109px;
+  height: 109px;
+  animation: 18s linear infinite rotation;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.site-footer {
+  opacity: 0;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
+  animation-name: fadeIn;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.site-footer::before {
+  width: 155px;
+  height: 155px;
+  animation: 18s linear infinite rotation;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.site-footer::after {
+  width: 173px;
+  height: 173px;
+  animation: 18s linear infinite rotation;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.site-footer ul::after {
+  animation: 18s linear infinite rotation;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

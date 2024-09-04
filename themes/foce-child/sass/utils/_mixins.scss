@@ -1,0 +1,31 @@
+@mixin section-fade-in($delay) {
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: $delay;
+    animation-fill-mode: forwards;
+    animation-name: fadeIn;
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+@mixin flower-rotation() {
+    animation: 18s linear infinite rotation;
+
+    @keyframes rotation {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}

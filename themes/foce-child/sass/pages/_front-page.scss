@@ -1,0 +1,65 @@
+.banner {
+    opacity: 0;
+    @include section-fade-in(0);
+}
+
+.story {
+    opacity: 0;
+    @include section-fade-in(2s);
+
+    h2 {
+        &::after {
+            width: 155px;
+            height: 155px;
+            @include flower-rotation;
+        }
+    }
+
+    &__article {
+        &::after {
+            @include flower-rotation;
+        }
+    }
+}
+
+#studio {
+    opacity: 0;
+    @include section-fade-in(4s);
+
+    h2 {
+        &::before {
+            width: 203px;
+            height: 203px;
+            @include flower-rotation;
+        }
+
+        &::after {
+            width: 109px;
+            height: 109px;
+            @include flower-rotation;
+        }
+    }
+}
+
+.site-footer {
+    opacity: 0;
+    @include section-fade-in(6s);
+
+    &::before {
+        width: 155px;
+        height: 155px;
+        @include flower-rotation;
+    }
+
+    &::after {
+        width: 173px;
+        height: 173px;
+        @include flower-rotation;
+    }
+
+    ul {
+        &::after {
+            @include flower-rotation;
+        }
+    }
+}
