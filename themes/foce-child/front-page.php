@@ -83,7 +83,6 @@ get_header();
     <?php get_template_part('parts/oscar'); ?>
 </main><!-- #main -->
 
-<script src="https://dist.dwl-mise.eu/scrollyt/scrollyt.js"></script>
 <script>
     init()
     scrollAnimate('sectionTitle', 'bottom', -100)
