@@ -8,15 +8,11 @@ get_header();
         <video class="banner__video" src="<?php echo get_stylesheet_directory_uri() . '/assets/videos/banner.mp4'; ?>"
             autoplay loop muted></video>
         <img class="banner__logo" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?>"
-            alt="logo Fleurs d'oranger & chats errants" data-top="top:0;animation-play-state:running;"
-            data--100-top="top:-75px;animation-play-state:paused;"
-            data--200-top="top:-150px;animation-play-state:paused;">
+            alt="logo Fleurs d'oranger & chats errants">
     </section>
     <section id="#story" class="story">
         <h2>
-            <div data-bottom-top="transform:translate3d(0, 220px, 0)" data--100-bottom="transform:translate3d(0,0px,0)">
-                L'histoire
-            </div>
+            <span class="sectionTitle">L'histoire</span>
         </h2>
         <article id="" class="story__article">
             <p><?php echo get_theme_mod('story'); ?></p>
@@ -69,9 +65,7 @@ get_header();
 
     <section id="studio">
         <h2>
-            <div data-bottom-top="transform:translate3d(0, 220px, 0)" data--100-bottom="transform:translate3d(0,0px,0)">
-                Studio Koukaki
-            </div>
+            <span class="sectionTitle">Studio Koukaki</span>
         </h2>
         <div>
             <p>Acteur majeur de l’animation, Koukaki est un studio intégré fondé en 2012 qui créé, produit et distribue
@@ -89,8 +83,21 @@ get_header();
     <?php get_template_part('parts/oscar'); ?>
 </main><!-- #main -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
-<script>var s = skrollr.init();</script>
+<script src="https://dist.dwl-mise.eu/scrollyt/scrollyt.js"></script>
+<script>
+    init()
+    scrollAnimate('sectionTitle', 'bottom', -100)
+    document.addEventListener('scroll', () => {
+        const scroll = window.scrollY
+        const banner = document.getElementsByClassName('banner')[0]
+        const logo = document.getElementsByClassName('banner__logo')[0]
+
+        const bannerHeight = banner.offsetHeight
+        const logoHeight = logo.offsetHeight
+
+        if (scroll <= ((bannerHeight - logoHeight) / 2) + (bannerHeight / 10)) logo.style.top = `${scroll}px`
+    })
+</script>
 
 <?php
 get_footer();

@@ -8,6 +8,17 @@
  Description: Thème enfant à l'ocasion de la nomination aux Oscars Shorts
  Version: 0.1
  */
+.sectionTitle {
+  display: inline-block;
+  transform: translate(0, 100px);
+  opacity: 0;
+  transition: all ease-in-out 500ms;
+}
+.sectionTitle.on {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
 .banner {
   position: relative;
   opacity: 0;
@@ -36,7 +47,7 @@
 .banner__logo {
   position: relative;
   z-index: 20;
-  transition: top ease-in-out 0.2s;
+  transition: top linear 0.2s;
   animation: 19s linear infinite floating;
 }
 @keyframes floating {
@@ -61,6 +72,9 @@
   100% {
     transform: translate(0, 0);
   }
+}
+.banner__logo.off {
+  animation-play-state: paused;
 }
 
 @media screen and (max-width: 425px) {
