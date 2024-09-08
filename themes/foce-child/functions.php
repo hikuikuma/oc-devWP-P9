@@ -3,7 +3,7 @@ add_action('wp_enqueue_scripts', 'foce_child_styles_and_scripts');
 function foce_child_styles_and_scripts()
 {
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
-    wp_enqueue_script('scrollyt-script', get_stylesheet_directory_uri() . '/js/scrollyt.js');
+    wp_enqueue_script('scrollyt-script', 'https://dist.dwl-mise.eu/scrollyt/scrollyt.js');
     wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
 }
 

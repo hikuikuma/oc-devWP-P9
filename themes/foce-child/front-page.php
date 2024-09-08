@@ -54,6 +54,8 @@ get_header();
             </div>
         </article>
         <article id="place">
+            <div id="placeBigCloud"></div>
+            <div id="placeLittleCloud"></div>
             <div>
                 <h3>Le Lieu</h3>
                 <p><?php echo get_theme_mod('place'); ?></p>
@@ -84,8 +86,12 @@ get_header();
 </main><!-- #main -->
 
 <script>
-    init()
-    scrollAnimate('sectionTitle', 'bottom', -100)
+    scrollyt = new Scrollyt()
+    scrollyt.scrollAnimate('sectionTitle', 'bottom', -100)
+    bigCloudAnimation = scrollyt.defineAnimation('placeBigCloud', 'translate3d', [0, -300, 'px'], [0, 0, 'px'], [0, 0, 'px'])
+    littleCloudAnimation = scrollyt.defineAnimation('placeLittleCloud', 'translate3d', [0, -300, 'px'], [0, 0, 'px'], [0, 0, 'px'])
+    scrollyt.twoPointsTransform(bigCloudAnimation, 'place', 'top', 'bottom', 'place', 'top', 'top')
+    scrollyt.twoPointsTransform(littleCloudAnimation, 'place', 'top', 'bottom', 'place', 'top', 'top')
     document.addEventListener('scroll', () => {
         const scroll = window.scrollY
         const banner = document.getElementsByClassName('banner')[0]

@@ -10,13 +10,13 @@
  */
 .sectionTitle {
   display: inline-block;
-  transform: translate(0, 100px);
+  transform: translate3d(0, 100px, 0);
   opacity: 0;
   transition: all ease-in-out 500ms;
 }
 .sectionTitle.on {
   opacity: 1;
-  transform: translate(0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .banner {
@@ -121,6 +121,28 @@
   100% {
     transform: rotate(360deg);
   }
+}
+.story #place {
+  position: relative;
+  background-image: url("./assets/images/place_bg.png");
+}
+
+#placeBigCloud {
+  position: absolute;
+  top: 65px;
+  left: 1031px;
+  width: 316px;
+  height: 122px;
+  background-image: url("./assets/images/big_cloud.png");
+}
+
+#placeLittleCloud {
+  position: absolute;
+  top: 248px;
+  left: 793px;
+  width: 142px;
+  height: 55px;
+  background-image: url("./assets/images/little_cloud.png");
 }
 
 #studio {
