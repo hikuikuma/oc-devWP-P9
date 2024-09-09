@@ -8,6 +8,82 @@
  Description: Thème enfant à l'ocasion de la nomination aux Oscars Shorts
  Version: 0.1
  */
+.main-navigation {
+  position: relative;
+}
+.main-navigation .site-title {
+  width: 50%;
+  margin: 0 auto;
+  line-height: 80px;
+  text-align: center;
+}
+.main-navigation .line {
+  position: absolute;
+  top: calc(50% - 1.5px);
+  transition: all 0.2s ease-in-out;
+}
+.main-navigation .line:first-of-type {
+  transform: translate3d(0, -5px, 0);
+}
+.main-navigation .line:last-of-type {
+  transform: translate3d(0, 5px, 0);
+}
+.main-navigation ul {
+  position: relative;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: calc(100vh - 80px);
+  background-color: #FFF5E9;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 2s;
+  overflow: hidden;
+}
+.main-navigation li {
+  font-size: 4em;
+}
+.main-navigation li a {
+  transition: all 0.2s ease-in-out;
+}
+.main-navigation li a:hover {
+  color: inherit;
+  text-shadow: 0px 0px 14px rgb(255, 92, 0);
+}
+.main-navigation.toggled .line:first-of-type {
+  transform: translate3d(0, 0, 0) rotate(45deg);
+}
+.main-navigation.toggled .line:nth-of-type(0n+2) {
+  opacity: 0;
+}
+.main-navigation.toggled .line:last-of-type {
+  transform: translate3d(0, 0, 0) rotate(-45deg);
+}
+.main-navigation.toggled ul {
+  display: flex;
+  opacity: 1;
+}
+
+.menu-toggle {
+  position: absolute;
+  top: 30px;
+  right: 132px;
+  display: block;
+  height: 20px;
+  width: 20px;
+  padding: 0 1em;
+  box-sizing: content-box;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 700px) {
+  .menu-toggle {
+    display: block;
+  }
+}
 .sectionTitle {
   display: inline-block;
   transform: translate3d(0, 100px, 0);
@@ -121,6 +197,20 @@
   100% {
     transform: rotate(360deg);
   }
+}
+.story #characters {
+  width: calc(100% - 12em);
+  flex-direction: column;
+}
+.story #characters h3 {
+  width: 600px;
+}
+.story #characters .swiper {
+  width: 100vw;
+  margin-left: calc(-6em - (100vw - 1440px) / 2);
+}
+.story #characters .swiper .swiper-slide {
+  width: 400px !important;
 }
 .story #place {
   position: relative;

@@ -62,6 +62,25 @@
         }
     }
 
+    & #characters {
+        width: calc(100% - 12em);
+        flex-direction: column;
+
+        & h3 {
+            width: 600px;
+        }
+
+        & .swiper {
+            width: 100vw;
+            margin-left: calc(-6em - calc(calc(100vw - 1440px) / 2));
+
+            & .swiper-slide {
+                width: 400px !important;
+            }
+        }
+
+    }
+
     & #place {
         position: relative;
         background-image: url('./assets/images/place_bg.png');

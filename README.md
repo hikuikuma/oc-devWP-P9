@@ -10,4 +10,5 @@ sass sass/main.scss style.css
 ```
 
 Utilisation des librairies suivantes :
-* [Skrollr](https://github.com/Prinzhorn/skrollr)
+* [Skrollyt](https://github.com/hikuikuma/scrollyt)
+* [SwiperJS](https://swiperjs.com/) v.11.1.12
