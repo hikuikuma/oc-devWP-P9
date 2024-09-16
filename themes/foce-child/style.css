@@ -8,6 +8,15 @@
  Description: Thème enfant à l'ocasion de la nomination aux Oscars Shorts
  Version: 0.1
  */
+main {
+  overflow: visible;
+}
+
+@media screen and (max-width: 1440px) {
+  main {
+    overflow: hidden;
+  }
+}
 .main-navigation {
   position: relative;
 }
@@ -37,11 +46,37 @@
   height: calc(100vh - 80px);
   background-color: #FFF5E9;
   opacity: 0;
-  transition-property: opacity;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in-out;
-  transition-delay: 2s;
   overflow: hidden;
+}
+.main-navigation ul::before {
+  content: url("../foce/assets/images/orchid.png");
+  position: absolute;
+  top: 4.5em;
+  left: -3.75em;
+  animation: 20s linear infinite rotation;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.main-navigation ul::after {
+  content: url("../foce/assets/images/hibiscus_footer.png");
+  position: absolute;
+  bottom: -23em;
+  right: -20em;
+  animation: 20s linear infinite rotation;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 .main-navigation li {
   font-size: 4em;
@@ -64,7 +99,223 @@
 }
 .main-navigation.toggled ul {
   display: flex;
-  opacity: 1;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-fill-mode: forwards;
+  animation-name: fadeIn;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.menu__story::before {
+  content: url("./assets/images/blue_cat.png");
+  position: absolute;
+  left: -6em;
+  top: -0.5em;
+  animation-duration: 19s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-name: meow;
+  animation-delay: 0.9s;
+  animation-direction: normal;
+}
+@keyframes meow {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(10px, -10px);
+  }
+  20% {
+    transform: translate(20px, 5px);
+  }
+  30% {
+    transform: translate(5px, 20px);
+  }
+  40% {
+    transform: translate(-20px, -10px);
+  }
+  50% {
+    transform: translate(15px, -20px);
+  }
+  60% {
+    transform: translate(-10px, 0);
+  }
+  70% {
+    transform: translate(-15px, 15px);
+  }
+  80% {
+    transform: translate(0, -20px);
+  }
+  90% {
+    transform: translate(15px, 5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.menu__story::after {
+  content: url("./assets/images/Sunflower.png");
+  position: absolute;
+  right: -7.5em;
+  top: -2.5em;
+  animation: 20s linear infinite rotation;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.menu__characters::after {
+  content: "";
+  background-image: url("../foce/assets/images/random_flower.png");
+  background-size: 75px auto;
+  position: absolute;
+  top: 21px;
+  right: -560px;
+  width: 75px;
+  height: 75px;
+  animation: 20s linear infinite rotation;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.menu__place::before {
+  content: "";
+  background-image: url("../foce/assets/images/flower.png");
+  background-size: 71px auto;
+  position: absolute;
+  left: -8em;
+  bottom: 20px;
+  width: 71px;
+  height: 71px;
+  animation: 20s linear infinite rotation;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.menu__place::after {
+  content: url("./assets/images/black_cat.png");
+  position: absolute;
+  top: -35px;
+  right: -8em;
+  width: 155px;
+  height: 155px;
+  animation-duration: 19s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-name: meow;
+  animation-delay: 0.45s;
+  animation-direction: alternate;
+}
+@keyframes meow {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(10px, -10px);
+  }
+  20% {
+    transform: translate(20px, 5px);
+  }
+  30% {
+    transform: translate(5px, 20px);
+  }
+  40% {
+    transform: translate(-20px, -10px);
+  }
+  50% {
+    transform: translate(15px, -20px);
+  }
+  60% {
+    transform: translate(-10px, 0);
+  }
+  70% {
+    transform: translate(-15px, 15px);
+  }
+  80% {
+    transform: translate(0, -20px);
+  }
+  90% {
+    transform: translate(15px, 5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.menu__blank {
+  min-height: 84px;
+}
+.menu__blank::before {
+  content: url("./assets/images/orange_cat.png");
+  position: absolute;
+  top: 0;
+  left: -640px;
+  animation-duration: 19s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-name: meow;
+  animation-delay: 0;
+  animation-direction: reverse;
+}
+@keyframes meow {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(10px, -10px);
+  }
+  20% {
+    transform: translate(20px, 5px);
+  }
+  30% {
+    transform: translate(5px, 20px);
+  }
+  40% {
+    transform: translate(-20px, -10px);
+  }
+  50% {
+    transform: translate(15px, -20px);
+  }
+  60% {
+    transform: translate(-10px, 0);
+  }
+  70% {
+    transform: translate(-15px, 15px);
+  }
+  80% {
+    transform: translate(0, -20px);
+  }
+  90% {
+    transform: translate(15px, 5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.menu__bottom {
+  font-size: 14px !important;
+  text-transform: uppercase;
 }
 
 .menu-toggle {

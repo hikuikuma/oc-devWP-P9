@@ -1,0 +1,9 @@
+main {
+    overflow: visible;
+}
+
+@media screen and (max-width: 1440px) {
+    main {
+        overflow: hidden;
+    }
+}

@@ -40,10 +40,12 @@
                     <li><img class="site-logo"
                             src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo_simple.png'; ?>"
                             alt="logo Fleurs d'oranger & chats errants"></li>
-                    <li><a href="#story">Histoire</a></li>
-                    <li><a href="#characters">Personnages</a></li>
-                    <li><a href="#place">Lieu</a></li>
+                    <li class="menu__story"><a href="#story">Histoire</a></li>
+                    <li class="menu__characters"><a href="#characters">Personnages</a></li>
+                    <li class="menu__place"><a href="#place">Lieu</a></li>
                     <li><a href="#studio">Studio Koukaki</a></li>
+                    <li class="menu__blank"></li>
+                    <li class="menu__bottom">Studio Koukaki</li>
                 </ul>
 
             </nav><!-- #site-navigation -->

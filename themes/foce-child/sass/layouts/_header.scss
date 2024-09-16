@@ -31,11 +31,23 @@
         height: calc(100vh - 80px);
         background-color: #FFF5E9;
         opacity: 0;
-        transition-property: opacity;
-        transition-duration: 0.5s;
-        transition-timing-function: ease-in-out;
-        transition-delay: 2s;
         overflow: hidden;
+
+        &::before {
+            content: url('../foce/assets/images/orchid.png');
+            position: absolute;
+            top: 4.5em;
+            left: -3.75em;
+            @include flower-rotation;
+        }
+
+        &::after {
+            content: url('../foce/assets/images/hibiscus_footer.png');
+            position: absolute;
+            bottom: -23em;
+            right: -20em;
+            @include flower-rotation;
+        }
     }
 
     & li {
@@ -68,8 +80,83 @@
 
         & ul {
             display: flex;
-            opacity: 1;
+            @include section-fade-in(0);
         }
+    }
+}
+
+.menu {
+    &__story {
+        &::before {
+            content: url('./assets/images/blue_cat.png');
+            position: absolute;
+            left: -6em;
+            top: -0.5em;
+            @include cat-floating(0.9s, normal);
+        }
+
+        &::after {
+            content: url('./assets/images/Sunflower.png');
+            position: absolute;
+            right: -7.5em;
+            top: -2.5em;
+            @include flower-rotation;
+        }
+    }
+
+    &__characters {
+        &::after {
+            content: "";
+            background-image: url('../foce/assets/images/random_flower.png');
+            background-size: 75px auto;
+            position: absolute;
+            top: 21px;
+            right: -560px;
+            width: 75px;
+            height: 75px;
+            @include flower-rotation;
+        }
+    }
+
+    &__place {
+        &::before {
+            content: "";
+            background-image: url('../foce/assets/images/flower.png');
+            background-size: 71px auto;
+            position: absolute;
+            left: -8em;
+            bottom: 20px;
+            width: 71px;
+            height: 71px;
+            @include flower-rotation;
+        }
+
+        &::after {
+            content: url('./assets/images/black_cat.png');
+            position: absolute;
+            top: -35px;
+            right: -8em;
+            width: 155px;
+            height: 155px;
+            @include cat-floating(0.45s, alternate);
+        }
+    }
+
+    &__blank {
+        min-height: 84px;
+
+        &::before {
+            content: url('./assets/images/orange_cat.png');
+            position: absolute;
+            top: 0;
+            left: -640px;
+            @include cat-floating(0, reverse);
+        }
+    }
+
+    &__bottom {
+        font-size: 14px !important;
+        text-transform: uppercase;
     }
 }
 
