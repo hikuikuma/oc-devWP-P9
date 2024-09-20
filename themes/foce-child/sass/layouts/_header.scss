@@ -34,7 +34,7 @@
         overflow: hidden;
 
         &::before {
-            content: url('../foce/assets/images/orchid.png');
+            content: url('./assets/images/orchid.png');
             position: absolute;
             top: 4.5em;
             left: -3.75em;
@@ -42,7 +42,7 @@
         }
 
         &::after {
-            content: url('../foce/assets/images/hibiscus_footer.png');
+            content: url('./assets/images/hibiscus_footer.png');
             position: absolute;
             bottom: -23em;
             right: -20em;
@@ -107,7 +107,7 @@
     &__characters {
         &::after {
             content: "";
-            background-image: url('../foce/assets/images/random_flower.png');
+            background-image: url('./assets/images/random_flower.png');
             background-size: 75px auto;
             position: absolute;
             top: 21px;
@@ -121,7 +121,7 @@
     &__place {
         &::before {
             content: "";
-            background-image: url('../foce/assets/images/flower.png');
+            background-image: url('./assets/images/flower.png');
             background-size: 71px auto;
             position: absolute;
             left: -8em;
